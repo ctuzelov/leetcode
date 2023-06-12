@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(backtracking.CombinationSum([]int{1, 2, 3, 4}, 8))
+	fmt.Println(backtracking.LetterCombinations("23"))
 }
