@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(backtracking.Combine(4, 2))
+	fmt.Println(backtracking.Combine(4, 3))
 }
