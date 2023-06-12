@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(backtracking.Combine(4, 3))
+	fmt.Println(backtracking.CombinationSum([]int{1, 2, 3, 4}, 8))
 }
