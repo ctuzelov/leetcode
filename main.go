@@ -6,9 +6,10 @@ import (
 )
 
 func main() {
-<<<<<<< HEAD
-	fmt.Println(backtracking.SolveNQueens(4))
-=======
-	fmt.Println(backtracking.GetMaximumGold([][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}))
->>>>>>> 972617fa05e96e524bd0df5e01a688f18e2cfc51
+	fmt.Println(backtracking.TotalNQueens(5))
+	fmt.Println(backtracking.TotalNQueens(6))
+	fmt.Println(backtracking.TotalNQueens(7))
+	fmt.Println(backtracking.TotalNQueens(8))
+	fmt.Println(backtracking.TotalNQueens(9))
+
 }
