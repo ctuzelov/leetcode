@@ -1,36 +1,28 @@
 package twoPointers
 
 func IsPalindrome(s string) bool {
-	t := make(map[string]int)
-	flag := false
+	t := ""
+
+	for _, c := range s {
+		if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') {
+			if c >= 'A' && c <= 'Z' {
+				t += string(c + 32)
+			} else {
+				t += string(c)
+			}
+		}
+		if c >= 48 && c <= 57 {
+			t += string(c)
+		}
+	}
 	p1 := 0
-	var c rune
 	p2 := len(t) - 1
 	for p1 < len(t)/2 {
-		c = rune(t[p1])
-		if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= 48 && c <= 57) {
-			_, ok := t[string(s[p1])]
-			if ok {
-				t[string(s[p1])] = +1
-				flag = true
-			} else {
-				t[string(s[p1])] = 1
-			}
-		}
-		c = rune(t[p2])
-		if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= 48 && c <= 57) {
-			_, ok := t[string(s[p1])]
-			if ok {
-				t[string(s[p2])] = -1
-				flag = true
-			} else {
-				t[string(s[p1])] = 1
-			}
-		}
-		if t[string(s[p1])] != 0 && flag {
+		if t[p1] != t[p2] {
 			return false
 		}
-
+		p1++
+		p2--
 	}
 	return true
 }
