@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(slidingWindow.LengthOfLongestSubstring("abcabcbb"))
+	fmt.Println(slidingWindow.CharacterReplacement("AABABBA", 1))
 }
