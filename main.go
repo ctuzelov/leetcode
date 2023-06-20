@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(slidingWindow.CharacterReplacement("AABABBA", 1))
+	fmt.Println(slidingWindow.LongestSubarray([]int{0, 1, 1, 1, 0, 1, 1, 0, 1}))
 }
