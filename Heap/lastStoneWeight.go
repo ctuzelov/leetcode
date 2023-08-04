@@ -2,14 +2,14 @@ package Heap
 
 import "container/heap"
 
-type maxHeap []int
+type IntHeap []int
 
-func (h maxHeap) Len() int           { return len(h) }
-func (h maxHeap) Less(i, j int) bool { return h[i] > h[j] }
-func (h maxHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+func (h IntHeap) Len() int           { return len(h) }
+func (h IntHeap) Less(i, j int) bool { return h[i] > h[j] }
+func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
-func (h *maxHeap) Push(x interface{}) { *h = append(*h, x.(int)) }
-func (h *maxHeap) Pop() interface{} {
+func (h *IntHeap) Push(x interface{}) { *h = append(*h, x.(int)) }
+func (h *IntHeap) Pop() interface{} {
 	old := *h
 	n := len(old)
 	x := old[n-1]
@@ -18,7 +18,7 @@ func (h *maxHeap) Pop() interface{} {
 }
 
 func LastStoneWeight(stones []int) int {
-	mxHeap := maxHeap(stones)
+	mxHeap := IntHeap(stones)
 	heap.Init(&mxHeap)
 
 	for len(mxHeap) >= 2 {

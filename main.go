@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(Heap.ReorganizeString("AAB"))
+	fmt.Println(Heap.FindKthLargest([]int{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4))
 }
