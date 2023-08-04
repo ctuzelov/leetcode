@@ -1,6 +1,6 @@
 package backtracking
 
-func SolveNQueens(n int) [][]string {
+func TotalNQueens(n int) int {
 	var (
 		res       [][]string
 		board     [][]byte
@@ -58,5 +58,5 @@ func SolveNQueens(n int) [][]string {
 
 	backtrack(0)
 
-	return res
+	return len(res)
 }
