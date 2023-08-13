@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(Heap.FurthestBuilding([]int{14, 3, 19, 3}, 17, 0))
+	fmt.Println(Heap.KthSmallest([][]int{{1, 3, 11},{2, 4, 6}}, 5))
 }
