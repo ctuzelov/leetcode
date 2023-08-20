@@ -4,6 +4,7 @@ import "container/heap"
 
 type Counter struct {
 	num  int
+	char string
 	freq int
 }
 
@@ -43,14 +44,14 @@ func RearrangeBarcodes(b []int) []int {
 	}
 
 	for k, v := range m {
-		heap.Push(hp, Counter{k, v})
+		heap.Push(hp, Counter{num: k, freq: v})
 	}
 
 	for hp.Len() > 0 {
 		entry := heap.Pop(hp).(Counter)
-		
-		if prevFreq > 0{
-			heap.Push(hp, Counter{prevNum, prevFreq})
+
+		if prevFreq > 0 {
+			heap.Push(hp, Counter{num: prevNum, freq: prevFreq})
 		}
 
 		res = append(res, entry.num)
