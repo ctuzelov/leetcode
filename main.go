@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(Heap.RearrangeBarcodes([]int{1, 1, 1, 1, 2, 2, 3, 3}))
+	fmt.Println(Heap.LeastInterval([]byte{'A', 'A', 'A', 'B', 'B', 'B'}, 2))
 }
