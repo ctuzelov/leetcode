@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"leetcode/Heap"
+	"leetcode/additional"
 )
 
 func main() {
-	fmt.Println(Heap.LeastInterval([]byte{'A', 'A', 'A', 'B', 'B', 'B'}, 2))
+	fmt.Println(additional.FindHighAccessEmployees([][]string{{"a", "0549"}, {"b", "0457"}, {"a", "0532"}, {"a", "0621"}, {"b", "0540"}}))
 }
